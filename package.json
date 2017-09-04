@@ -1,0 +1,28 @@
+{
+  "name": "velathosian-ml-worker",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "clean": "rm -rf bin/",
+    "start": "node worker/lib/src/worker.js",
+    "start:pretty": "node worker/lib/src/worker.js | bunyan -o short -l debug",
+    "start:dev": "npm install && nodemon -x 'npm-run-all start:pretty' --watch worker/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uninstall": "rm -rf node_modules/ && npm run clean"
+  },
+  "dependencies": {
+    "amqplib": "0.5.1",
+    "async-busboy": "0.3.3",
+    "async-parallel": "1.0.7",
+    "bunyan": "1.8.5",
+    "lodash": "4.17.3",
+    "moment": "2.17.1",
+    "mongoose": "4.11.9",
+    "node-fetch": "1.7.2",
+    "request": "2.79.0",
+    "python-shell": "0.4.0",
+    "swagger2": "0.0.20",
+    "nodemon": "1.11.0",
+    "npm-run-all": "3.1.1"
+  }
+}
